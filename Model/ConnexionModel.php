@@ -3,19 +3,16 @@
     protected $dbName = 'base'; /** Database Name */
     protected $dbHost = 'localhost'; /** Database Host */
     protected $dbUser = 'med'; /** Database Root */
-    protected $dbPass = ''; /** Databse Password */
+    protected $dbPass = ''; /** Databse pwd */
     protected $dbHandler, $dbStmt;
 
     /**
       * @param null|void
       * @return null|void
-      * @desc Creates or resume an existing database connection...
     **/
     public function __construct()
     {
-      // Create a DSN Resource...
       $Dsn = "mysql:host=" . $this->dbHost . ';dbname=' . $this->dbName;
-      //create a pdo options array
       $Options = array(
         PDO::ATTR_PERSISTENT => true,
         PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
@@ -31,7 +28,6 @@
     /**
       * @param string
       * @return null|void
-      * @desc Creates a PDO statement object
     **/
     public function query($query)
     {
@@ -42,7 +38,6 @@
     /**
       * @param string|integer|
       * @return null|void
-      * @desc Matches the correct datatype to the PDO Statement Object.
     **/
     public function bind($param, $value, $type = null)
     {
@@ -70,7 +65,6 @@
     /**
       * @param null|void
       * @return null|void
-      * @desc Executes a PDO Statement Object or a db query...
     **/
     public function execute()
     {
@@ -81,7 +75,6 @@
     /**
       * @param null|void
       * @return null|void
-      * @desc Executes a PDO Statement Object an returns a single database record as an associative array...
     **/
     public function fetch()
     {
@@ -92,7 +85,6 @@
     /**
       * @param null|void
       * @return null|void
-      * @desc Executes a PDO Statement Object an returns nultiple database record as an associative array...
     **/
     public function fetchAll()
     {

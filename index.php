@@ -18,10 +18,8 @@
 	</head>
 	<body>
 
-	<?php if (isset($Response['status']) && !$Response['status']) : ?>
-	<span><B>Oops     :'(   </B> Informations d'identification utilisées non valides.</span> 
-	<?php endif; ?>
 
+	<div id="container">
 		<h1>Identification</h1>
 		<!-- <form method="post" action="/index.php?action=login"> -->
 		<form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" class="form-signin">
@@ -30,11 +28,19 @@
 				<label for="username">Utilisateur</label>
 				<input value="test" type="text" name="username" id="username" placeholder="utilisateur" />
 				<label for="password">Mot de passe</label>
-				<input  value="Medtek@10"  type="password" name="password" id="password" placeholder="mot de passe" />
+				<input value="Medtek@10"  type="password" name="password" id="password" placeholder="mot de passe" />
 				<input type="submit" id="submit" value="Connexion" />
 			</fieldset>
 		</form>
-		{{ errors }}
+
+	<?php if (isset($Response['status']) && !$Response['status']) : ?>
+		<div id="errors">
+			<span><B>Oops     :'(   </B> Informations d'identification utilisées non valides.</span>
+		</div>
+	<?php endif; ?>
+
+
+	</div>
 	</body>
 </html>
 

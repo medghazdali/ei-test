@@ -10,7 +10,6 @@ class LoginController extends Controller {
   /**
     * @param null|void
     * @return null|void
-    * @desc Checks if the user session is set and creates a new instance of the LoginModel...
   **/
   public function __construct()
   {
@@ -21,7 +20,6 @@ class LoginController extends Controller {
   /**
     * @param array
     * @return array|boolean
-    * @desc Verifies and redirects a user by calling the login method on the LoginModel...
   **/
   public function login(array $data)
   {
@@ -33,7 +31,6 @@ class LoginController extends Controller {
     // echo '=====...>>>>>'.$usernameRecords['status'];
     if (!$usernameRecords['status']) {
       if (password_verify($password, $usernameRecords['data']['password'])) {
-        //check if the remember_me was selected...
         $Response = array(
           'status' => true
         );

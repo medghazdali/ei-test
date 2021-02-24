@@ -17,6 +17,14 @@ body {
 #container {
   width: 45%;
 }
+#errors {
+  padding: 20px;
+}
+
+#errors > span {
+  color:red;
+}
+
 
 #container > form {
   background-color: #fff;
