@@ -1,0 +1,101 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #e2e2e2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: sans-serif;
+}
+
+#container {
+  width: 45%;
+}
+
+#container > form {
+  background-color: #fff;
+  padding: 20px;
+  margin-top: 10px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 8%);
+}
+
+#container > form > fieldset {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  border-color: #e2e2e2;
+}
+
+#container > form > fieldset > label {
+  display: none;
+}
+
+#container > form > fieldset > input[type="text"],
+input[type="password"] {
+  padding: 8px;
+  width: 80%;
+  border-color: #e2e2e2;
+  border-width: 1px;
+}
+
+#username {
+  margin-bottom: 10px;
+}
+
+#password {
+  margin-bottom: 30px;
+}
+
+#submit {
+  background-color: #000;
+  color: #fff;
+  float: right;
+  width: 30%;
+  padding: 4px 8px;
+  border-radius: 4px;
+  border-width: 0px;
+  margin: 0 0 0 auto;
+}
+
+/* main page styling */
+
+ul {
+  background-color: black;
+  width: 100%;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+}
+
+ul > li {
+  padding: 15px 20px;
+}
+
+ul > li:nth-child(1) {
+  border-right: 1px solid #fff;
+}
+
+ul > li > a {
+  color: #fff;
+  text-decoration: none;
+}
+
+#clickblock {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#clickblock > a {
+  text-decoration: underline;
+  cursor: pointer;
+}
