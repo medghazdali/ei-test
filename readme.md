@@ -6,6 +6,7 @@ https://github.com/medghazdali/ei-test
 
 ### Project Directory
 
+*/Dir
     */controller
         /LoginController.php
         /MainController.php
