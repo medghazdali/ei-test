@@ -1,3 +1,10 @@
+<?php require_once('./Controller/MainController.php'); ?>
+<?php
+  $Main = new MainController();
+  $Response = [];
+  $active = $Main->active;
+?>
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -9,7 +16,8 @@
 	<body>
 		<ul>
 			<li><a href="/index.php">Accueil</a></li>
-			<li><a href="/index.php?action=logout">Déconnexion</a></li>
+			<li><a href="logout.php">Déconnexion</a></li>
+
 		</ul>
 		<div id="clickblock">
 			<a onclick="autoCorrect(this); return false;">Il y a des fotes dan sete fraz. Cliké ici pour lé corrigés.</a>
