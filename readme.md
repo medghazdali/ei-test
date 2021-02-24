@@ -6,7 +6,7 @@ https://github.com/medghazdali/ei-test
 
 ### Project Directory
 
-*/Dir
+*/ Project
     */controller
         /LoginController.php
         /MainController.php
@@ -17,5 +17,5 @@ https://github.com/medghazdali/ei-test
     index.php
     logout.php
 
-script.js
-style.js
+    script.js
+    style.js
