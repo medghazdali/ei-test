@@ -26,9 +26,11 @@ class LoginController extends Controller {
     $username = stripcslashes(strip_tags($data['username']));
     $password = stripcslashes(strip_tags($data['password']));
 
+    echo '=====...>>>>>'.$username;
+
+$username=strval($username);
     $usernameRecords = $this->loginModel->fetchusername($username);
 
-    // echo '=====...>>>>>'.$usernameRecords['status'];
     if (!$usernameRecords['status']) {
       if (password_verify($password, $usernameRecords['data']['password'])) {
         $Response = array(

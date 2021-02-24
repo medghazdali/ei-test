@@ -6,7 +6,7 @@
       * @param string
       * @return array
     **/
-    public function fetchusername(string $username) :array
+    public function fetchusername($username) 
     {
 
 

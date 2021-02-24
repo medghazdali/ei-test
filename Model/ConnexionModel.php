@@ -1,10 +1,11 @@
 <?php
   class ConnexionModel {
-    protected $dbName = 'base'; /** Database Name */
+    protected $dbName = 'mohamed_vatye'; /** Database Name */
     protected $dbHost = 'localhost'; /** Database Host */
-    protected $dbUser = 'med'; /** Database Root */
-    protected $dbPass = ''; /** Databse pwd */
+    protected $dbUser = 'mohamed_vatye'; /** Database Root */
+    protected $dbPass = 'wzdG3FQrUQpv41y8HyLkgDzTJ1VCnQOC'; /** Databse pwd */
     protected $dbHandler, $dbStmt;
+
 
     /**
       * @param null|void
