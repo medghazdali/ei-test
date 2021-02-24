@@ -16,6 +16,8 @@
 
       $this->bind('username', $username);
       $this->execute();
+      
+      $this->EditLastLogin();
 
       $username = $this->fetch();
       // var_dump($username) ;
@@ -36,30 +38,24 @@
           'data' => $username
         );
 
+
+
         return $Response;
       }
+
+
     }
     /**
       * @param array
       * @return array
       * @desc Creates and returns a user record....
     **/
-    public function EditLastLogin(array $user) :array
+    public function EditLastLogin()
     {
 
-      var_dump($user);
-      // $this->query("INSERT INTO `user` (name, email, phone_no, password) VALUES (:name, :email, :phone_no, :password)");
-      // $this->bind('name', $user['name']);
-      // $this->bind('email', $user['email']);
-      // $this->bind('phone_no', $user['phone']);
-      // $this->bind('password', $user['password']);
-
       // $lastlogintime = date("Y-m-d H:i:s");
-
-      // // query
-      // $sql = "UPDATE `users` SET `user_lastlogin` = `$lastlogintime` WHERE `id` = :user->id";
-      // $q = $db->prepare($sql);
-      // $q->execute();
+      $sql = "UPDATE `user` SET `last_login` = `$lastlogintime` WHERE `id_user` = 1";
+      $this->execute();
 
     return true;
 
